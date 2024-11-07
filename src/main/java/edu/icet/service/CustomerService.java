@@ -9,7 +9,7 @@ public interface CustomerService {
     void addCustomer(Customer customer);
     void deleteCustomerByID(Long customerID);
     Customer searchCustomerByID(Long customerID);
-    Customer searchCustomerByDLicense(String DLnumber);
+    Customer searchCustomerByDLicense(String DLNumber);
     void updateCustomer(Customer customer);
     List<Customer> getAllCustomers();
 }

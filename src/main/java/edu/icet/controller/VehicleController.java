@@ -27,6 +27,26 @@ public class VehicleController {
         return service.searchVehicleByID(vehicleID);
     }
 
+    @GetMapping("/search_vehicle_by_noPlate/{noPlate}")
+    public Vehicle searchVehicleByNoPlate(@PathVariable String noPlate){
+        return service.searchVehicleByNoPlate(noPlate);
+    }
+
+    @GetMapping("/search_vehicle_by_type/{type}")
+    public Vehicle searchVehicleByType(@PathVariable String type){
+        return service.searchVehicleByType(type);
+    }
+
+    @GetMapping("/search_vehicle_by_colour/{colour}")
+    public Vehicle searchVehicleByColoyr(@PathVariable String colour){
+        return service.searchVehicleByColour(colour);
+    }
+
+    @GetMapping("/search_vehicle_by_model/{model}")
+    public Vehicle searchVehicleByModel(@PathVariable String model){
+        return service.searchVehicleByModel(model);
+    }
+
     @PutMapping("/update_vehicle")
     public void updateVehicle(@RequestBody Vehicle vehicle){
         service.updateVehicle(vehicle);

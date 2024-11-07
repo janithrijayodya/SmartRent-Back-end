@@ -27,6 +27,12 @@ public class CustomerController {
         return service.searchCustomerByID(customerID);
     }
 
+//    ============== NOT WORKING============
+    @GetMapping("/search_customer_by_DLNumber/{DLNumber}")
+    public Customer searchCustomerByDLNumber(@PathVariable String DLNumber){
+        return service.searchCustomerByDLicense(DLNumber);
+    }
+
     @PutMapping("/update_customer")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void updateCustomer(@RequestBody Customer customer){

@@ -10,4 +10,6 @@ public interface RentalService {
     Rental searchRentalByID(Long rentalID);
     void updateRental(Rental rental);
     List<Rental> getAllRentals();
+    Rental searchRentalByCustomerID(Long customerID);
+    Rental searchRentalByVehicleID(Long VehicleID);
 }

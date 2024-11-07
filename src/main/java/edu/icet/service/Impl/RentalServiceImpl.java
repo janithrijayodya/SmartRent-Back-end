@@ -3,6 +3,7 @@ package edu.icet.service.Impl;
 import edu.icet.dao.RentalDao;
 import edu.icet.entity.RentalEntity;
 import edu.icet.model.Rental;
+import edu.icet.model.Vehicle;
 import edu.icet.service.RentalService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -44,5 +45,15 @@ public class RentalServiceImpl implements RentalService {
             rentalList.add(mapper.map(rentalEntity,Rental.class));
         });
         return  rentalList;
+    }
+
+    @Override
+    public Rental searchRentalByCustomerID(Long customerID) {
+        return mapper.map(rentalDao.findByCustomerID(customerID),Rental.class);
+    }
+
+    @Override
+    public Rental searchRentalByVehicleID(Long VehicleID) {
+        return  mapper.map(rentalDao.findByVehicleID(VehicleID), Rental.class);
     }
 }

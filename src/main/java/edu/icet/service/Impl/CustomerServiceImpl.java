@@ -35,8 +35,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer searchCustomerByDLicense(String DLnumber) {
-        return null;
+    public Customer searchCustomerByDLicense(String DLNumber) {
+        return mapper.map(customerDao.findByDLNumber(DLNumber),Customer.class);
     }
 
     @Override

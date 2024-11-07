@@ -11,4 +11,8 @@ public interface VehicleService {
     Vehicle searchVehicleByID(Long vehicleID);
     void updateVehicle(Vehicle vehicle);
     List<Vehicle> getAllVehicles();
+    Vehicle searchVehicleByNoPlate(String noPlate);
+    Vehicle searchVehicleByType(String type);
+    Vehicle searchVehicleByColour(String colour);
+    Vehicle searchVehicleByModel(String model);
 }

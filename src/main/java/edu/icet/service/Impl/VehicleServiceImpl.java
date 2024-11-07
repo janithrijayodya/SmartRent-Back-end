@@ -45,4 +45,24 @@ public class VehicleServiceImpl implements VehicleService {
         });
         return vehicleList;
     }
+
+    @Override
+    public Vehicle searchVehicleByNoPlate(String noPlate) {
+        return mapper.map(vehicleDao.findBynoPlate(noPlate), Vehicle.class);
+    }
+
+    @Override
+    public Vehicle searchVehicleByType(String type) {
+        return mapper.map(vehicleDao.findByType(type), Vehicle.class);
+    }
+
+    @Override
+    public Vehicle searchVehicleByColour(String colour) {
+        return mapper.map(vehicleDao.findByColour(colour), Vehicle.class);
+    }
+
+    @Override
+    public Vehicle searchVehicleByModel(String model) {
+        return mapper.map(vehicleDao.findByModel(model), Vehicle.class);
+    }
 }

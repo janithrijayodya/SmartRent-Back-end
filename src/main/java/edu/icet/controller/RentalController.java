@@ -26,6 +26,16 @@ public class RentalController {
         return service.searchRentalByID(rentalID);
     }
 
+    @GetMapping("/search_rental_by_CustomerID/{CustomerID}")
+    public Rental searchRentalByCustomerID(@PathVariable Long CustomerID){
+        return service.searchRentalByCustomerID(CustomerID);
+    }
+
+    @GetMapping("/search_rental_by_VehicleID/{VehicleID}")
+    public Rental searchRentalByVehicleID(@PathVariable Long VehicleID){
+        return service.searchRentalByVehicleID(VehicleID);
+    }
+
     @PutMapping("/update_rental")
     public void updateRental(@RequestBody Rental rental){
         service.updateRental(rental);
