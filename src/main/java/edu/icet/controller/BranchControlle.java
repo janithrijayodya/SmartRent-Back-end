@@ -33,6 +33,11 @@ public class BranchControlle {
         return service.searchBranchByLocation(location);
     }
 
+    @GetMapping("/search_by_email/{branchEmail}")
+    public Branch searchBranchByEmail(@PathVariable String branchEmail){
+        return service.searchBranchByEmail(branchEmail);
+    }
+
     @DeleteMapping("/delete_branch_by_branchID/{branchID}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void deleteBranchByID(@PathVariable Long branchID){

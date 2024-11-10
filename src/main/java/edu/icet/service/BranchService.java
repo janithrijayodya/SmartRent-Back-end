@@ -11,4 +11,5 @@ public interface BranchService {
     Branch searchBranchByLocation(String location);
     void updateBranchByID(Branch branch);
     List<Branch> getAllBranches();
+    Branch searchBranchByEmail(String branchEmail);
 }

@@ -53,4 +53,9 @@ public class BranchServiceImpl  implements BranchService {
         });
         return branchArrayList;
     }
+
+    @Override
+    public Branch searchBranchByEmail(String branchEmail) {
+       return mapper.map(branchDao.findByBranchEmail(branchEmail),Branch.class);
+    }
 }

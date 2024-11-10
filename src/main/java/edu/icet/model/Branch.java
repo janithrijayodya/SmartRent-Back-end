@@ -15,4 +15,5 @@ public class Branch {
     private String address;
     private String branchEmail;
     private String branchContact;
+    private String password;
 }

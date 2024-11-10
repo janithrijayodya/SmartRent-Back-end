@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BranchDao extends JpaRepository<edu.icet.entity.BranchEntity,Long> {
     BranchEntity findByLocation(String location);
+    BranchEntity findByBranchEmail(String branchEmail);
 }
