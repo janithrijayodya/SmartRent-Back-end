@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/customer")
 @RequiredArgsConstructor
+@CrossOrigin
 public class CustomerController {
 
     @Autowired

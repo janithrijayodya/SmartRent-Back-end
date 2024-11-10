@@ -12,6 +12,7 @@ import lombok.ToString;
 public class Branch {
     private Long branchID;
     private String location;
+    private String address;
     private String branchEmail;
     private String branchContact;
 }

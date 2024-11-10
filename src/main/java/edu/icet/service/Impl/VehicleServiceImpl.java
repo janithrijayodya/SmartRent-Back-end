@@ -52,17 +52,29 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     @Override
-    public Vehicle searchVehicleByType(String type) {
-        return mapper.map(vehicleDao.findByType(type), Vehicle.class);
+    public List<Vehicle> searchVehicleByType(String type) {
+        List<Vehicle> vehicleList = new ArrayList<>();
+        vehicleDao.findByType(type).forEach(vehicleEntity -> {
+            vehicleList.add(mapper.map(vehicleEntity,Vehicle.class));
+        });
+        return vehicleList;
     }
 
     @Override
-    public Vehicle searchVehicleByColour(String colour) {
-        return mapper.map(vehicleDao.findByColour(colour), Vehicle.class);
+    public List<Vehicle> searchVehicleByColour(String colour) {
+        List<Vehicle> vehicleList = new ArrayList<>();
+        vehicleDao.findByColour(colour).forEach(vehicleEntity -> {
+            vehicleList.add(mapper.map(vehicleEntity,Vehicle.class));
+        });
+        return vehicleList;
     }
 
     @Override
-    public Vehicle searchVehicleByModel(String model) {
-        return mapper.map(vehicleDao.findByModel(model), Vehicle.class);
+    public List<Vehicle> searchVehicleByModel(String model) {
+        List<Vehicle> vehicleList = new ArrayList<>();
+        vehicleDao.findByModel(model).forEach(vehicleEntity -> {
+            vehicleList.add(mapper.map(vehicleEntity,Vehicle.class));
+        });
+        return vehicleList;
     }
 }

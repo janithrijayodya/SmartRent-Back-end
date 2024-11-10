@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/vehicle")
+@CrossOrigin
 public class VehicleController {
 
     @Autowired
@@ -33,17 +34,17 @@ public class VehicleController {
     }
 
     @GetMapping("/search_vehicle_by_type/{type}")
-    public Vehicle searchVehicleByType(@PathVariable String type){
+    public List<Vehicle> searchVehicleByType(@PathVariable String type){
         return service.searchVehicleByType(type);
     }
 
     @GetMapping("/search_vehicle_by_colour/{colour}")
-    public Vehicle searchVehicleByColoyr(@PathVariable String colour){
+    public List<Vehicle> searchVehicleByColour(@PathVariable String colour){
         return service.searchVehicleByColour(colour);
     }
 
     @GetMapping("/search_vehicle_by_model/{model}")
-    public Vehicle searchVehicleByModel(@PathVariable String model){
+    public List<Vehicle> searchVehicleByModel(@PathVariable String model){
         return service.searchVehicleByModel(model);
     }
 

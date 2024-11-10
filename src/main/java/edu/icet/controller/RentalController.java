@@ -11,6 +11,7 @@ import java.util.List;
 @RequestMapping("/rental")
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin
 public class RentalController {
 
     @Autowired

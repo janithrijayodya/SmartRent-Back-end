@@ -12,7 +12,7 @@ public interface VehicleService {
     void updateVehicle(Vehicle vehicle);
     List<Vehicle> getAllVehicles();
     Vehicle searchVehicleByNoPlate(String noPlate);
-    Vehicle searchVehicleByType(String type);
-    Vehicle searchVehicleByColour(String colour);
-    Vehicle searchVehicleByModel(String model);
+    List<Vehicle> searchVehicleByType(String type);
+    List<Vehicle> searchVehicleByColour(String colour);
+    List<Vehicle> searchVehicleByModel(String model);
 }

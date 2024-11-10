@@ -17,6 +17,7 @@ public class BranchEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long branchID;
     private String location;
+    private String address;
     private String branchEmail;
     private String branchContact;
 }

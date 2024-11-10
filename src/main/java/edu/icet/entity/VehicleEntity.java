@@ -23,5 +23,7 @@ public class VehicleEntity {
     private String type;
     private String description;
     private Double rentalPrice;
+    private String status;
     private Long branchID;
+
 }

@@ -11,4 +11,5 @@ public interface EmployeeService {
     Employee searchEmployeeByID(Long employeeID);
     void updateEmployee(Employee employee);
     List<Employee> getAllEmployees();
+    Employee searchEmployeeByNIC(String nic);
 }

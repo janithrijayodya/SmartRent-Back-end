@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/branch")
 @RequiredArgsConstructor
+@CrossOrigin
 public class BranchControlle {
     @Autowired
     final BranchService service;

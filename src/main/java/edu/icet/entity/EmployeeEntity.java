@@ -16,6 +16,7 @@ public class EmployeeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long employeeID;
+    private String nic;
     private String employeeName;
     private String employeeAddress;
     private String employeeContact;

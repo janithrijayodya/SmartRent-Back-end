@@ -1,11 +1,14 @@
 package edu.icet.dao;
 
 import edu.icet.entity.VehicleEntity;
+import edu.icet.model.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
 
 public interface VehicleDao extends JpaRepository<edu.icet.entity.VehicleEntity,Long> {
     VehicleEntity findBynoPlate(String noPlate);
-    VehicleEntity findByType(String type);
-    VehicleEntity findByColour(String colour);
-    VehicleEntity findByModel(String model);
+    List<VehicleEntity> findByType(String type);
+    List<VehicleEntity> findByColour(String colour);
+    List<VehicleEntity> findByModel(String model);
 }

@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -39,6 +40,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> getAllEmployees() {
-        return List.of();
+        List<Employee> employeeArrayList = new ArrayList<>();
+        employeeDao.findAll().forEach(employeeEntity -> {
+            employeeArrayList.add(mapper.map(employeeEntity, Employee.class));
+        });
+        return employeeArrayList;
+    }
+
+    @Override
+    public Employee searchEmployeeByNIC(String nic) {
+        return mapper.map(employeeDao.findBynic(nic) , Employee.class);
     }
 }
