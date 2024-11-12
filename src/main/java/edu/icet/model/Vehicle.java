@@ -1,5 +1,6 @@
 package edu.icet.model;
 
+import edu.icet.dao.BranchDao;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,5 +20,7 @@ public class Vehicle {
     private String description;
     private Double rentalPrice;
     private String status;
-    private Long branchID;
+//    private Long branchID;
+    private Branch branchDao;
 }
+

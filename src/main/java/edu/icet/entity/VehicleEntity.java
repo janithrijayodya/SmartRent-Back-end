@@ -1,10 +1,8 @@
 package edu.icet.entity;
 
+import edu.icet.model.Branch;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
@@ -24,6 +22,11 @@ public class VehicleEntity {
     private String description;
     private Double rentalPrice;
     private String status;
-    private Long branchID;
+
+    @ManyToOne
+    @NonNull
+    @JoinColumn(name="branchID",referencedColumnName = "branchID")
+    private BranchEntity branch;
+//    private Long branchID;
 
 }
